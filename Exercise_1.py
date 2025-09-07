@@ -31,7 +31,7 @@ Constraints:
 1 <= r[i], g[i], b[i] <= 106
 
 Solution:
-1. 1. Brute Force (Recursion): Generate all possible ways of coloring all the houses with the RBG colors and find the minimum cost among all the possible combinations such that no two adjacent houses have the same colors.
+1. Brute Force (Recursion): Generate all possible ways of coloring all the houses with the RBG colors and find the minimum cost among all the possible combinations such that no two adjacent houses have the same colors.
 Time: O(2^N), Space: O(N)
 
 2. Recursion with memoization (top-down approach): Same as recursion but using hash map to avoid repeated computation of sub problems.
