@@ -101,8 +101,10 @@ def coin_change2(coins, amount):
         return case_0 + case_1
 
     N = len(coins)
-    if N == 0 or amount == 0:
+    if N == 0:
         return 0
+    if amount == 0:
+        return 1
 
     return recurse(coins, amount, 0)
 
@@ -141,7 +143,7 @@ def run_coin_change2():
         num_coins = coin_change2(coins, amount)
         elapsed =  time.time()*1000 - start
         print(f"\ncoins = {coins}")
-        print(f"Min number of coins to reach target {amount} = {num_coins}, time = {elapsed:.2f} ms (recursion)")
+        print(f"No. of combinations that make up {amount} = {num_coins}, time = {elapsed:.2f} ms (recursion)")
         print(f"Pass: {ans == num_coins}")
 
     for test in tests:
@@ -150,7 +152,7 @@ def run_coin_change2():
         num_coins = coin_change2_DP(coins, amount)
         elapsed =  time.time()*1000 - start
         print(f"\ncoins = {coins}")
-        print(f"Min number of coins to reach target {amount} = {num_coins}, time = {elapsed:.2f} ms (DP)")
+        print(f"No. of combinations that make up  {amount} = {num_coins}, time = {elapsed:.2f} ms (DP)")
         print(f"Pass: {ans == num_coins}")
 
 

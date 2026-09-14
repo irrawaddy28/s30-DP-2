@@ -87,9 +87,8 @@ def paint_house(costs, N):
 
         return min(cost_r, cost_b, cost_g)
 
-    N = len(costs)
-    if N == 0:
-            return 0
+    if len(costs) == 0:
+        return 0
     cost_r = recurse(costs, 0, 0)
     cost_b = recurse(costs, 0, 1)
     cost_g = recurse(costs, 0, 2)
